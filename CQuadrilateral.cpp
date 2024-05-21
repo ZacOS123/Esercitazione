@@ -1,5 +1,7 @@
 #include <cstring>
 #include "CQuadrilateral.h"
+#include <string.h>
+using namespace std;
 
 /// @brief default constructor 
 Quadrilateral::Quadrilateral() {
@@ -13,8 +15,11 @@ Quadrilateral::Quadrilateral() {
 /// @brief constructor 
 /// ta a struct of type TextArea with infos on text and font size
 Quadrilateral::Quadrilateral(TextArea ta) {
-
-	
+	ta.size = 0;
+	for (i = 0; i < SLEN; i++)
+	{
+		ta.string[i] = 0;
+	}
 } 
 
 /// @brief copy constructor 
@@ -138,7 +143,7 @@ void Quadrilateral::GetSides(float &s0, float &s1, float &s2, float &s3) {
 /// @brief get the info about the text area
 /// @param ta a struct of type TextArea to be filled
 void Quadrilateral::GetTextArea(TextArea &ta) {
-	
+	return 
 	
 } 
 
@@ -160,22 +165,27 @@ unsigned int Quadrilateral::GetFontSize() {
 /// @brief set the text area of the object 
 /// @param ta a struct of type TextArea filled with a text and a font size
 void Quadrilateral::SetTextArea(TextArea ta) {
-
+	if (ta )
 	
 }
 
 /// @brief set the text of the text area 
 /// @param text the text 
 void Quadrilateral::SetText(char* text) {
-
-
+	if (strlen(text) > 50)
+	{
+		cout << "You are only allowed to insert 50 caracters!!!" << endl;
+	}
+	else
+	{
+		std:: strcpy(tarea->string, testlength);
+	}
 }
 
 /// @brief set the font size of the text area 
 /// @param size the font size 
 void Quadrilateral::SetFontSize(unsigned int size) {
-	
-
+	tarea->size = size;
 }
 
 
