@@ -1,0 +1,409 @@
+\doxysection{Quadrilateral Class Reference}
+\hypertarget{class_quadrilateral}{}\label{class_quadrilateral}\index{Quadrilateral@{Quadrilateral}}
+
+
+an abstract base class for quadrilateral  
+
+
+
+
+{\ttfamily \#include $<$CQuadrilateral.\+h$>$}
+
+Inheritance diagram for Quadrilateral\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_quadrilateral}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{Indent}\textbf{ CONSTRUCTORS/\+DESTRUCTOR}\par
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_quadrilateral_a9523424da49ca44ae3b979f8f5576732}\label{class_quadrilateral_a9523424da49ca44ae3b979f8f5576732} 
+{\bfseries Quadrilateral} ()
+\begin{DoxyCompactList}\small\item\em default constructor \end{DoxyCompactList}\item 
+\Hypertarget{class_quadrilateral_ab55afb1d60af5783a3c71410f1f089a7}\label{class_quadrilateral_ab55afb1d60af5783a3c71410f1f089a7} 
+{\bfseries Quadrilateral} (\mbox{\hyperlink{struct_text_area}{Text\+Area}} ta)
+\begin{DoxyCompactList}\small\item\em constructor ta a struct of type \doxylink{struct_text_area}{Text\+Area} with infos on text and font size \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_quadrilateral_a97514417778deb314b4d8a0f81a240ef}{Quadrilateral}} (const \mbox{\hyperlink{class_quadrilateral}{Quadrilateral}} \&o)
+\begin{DoxyCompactList}\small\item\em copy constructor \end{DoxyCompactList}\item 
+\Hypertarget{class_quadrilateral_ab7fc1753df6445a61dfc94790f9d0b5a}\label{class_quadrilateral_ab7fc1753df6445a61dfc94790f9d0b5a} 
+virtual {\bfseries \texorpdfstring{$\sim$}{\string~}\+Quadrilateral} ()
+\begin{DoxyCompactList}\small\item\em destructor \end{DoxyCompactList}\end{DoxyCompactItemize}
+\end{Indent}
+\begin{Indent}\textbf{ OPERATORS}\par
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_quadrilateral}{Quadrilateral}} \& \mbox{\hyperlink{class_quadrilateral_a5e95fb0b6dc309773c6f45b1e7453b21}{operator=}} (const \mbox{\hyperlink{class_quadrilateral}{Quadrilateral}} \&o)
+\begin{DoxyCompactList}\small\item\em overload of operator = \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_quadrilateral_a40290e9a1394cb238b41fc020d0010d8}{operator==}} (const \mbox{\hyperlink{class_quadrilateral}{Quadrilateral}} \&o)
+\begin{DoxyCompactList}\small\item\em overload of operator == \end{DoxyCompactList}\end{DoxyCompactItemize}
+\end{Indent}
+\begin{Indent}\textbf{ BASIC HANDLING}\par
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_quadrilateral_acc2dd41d833e41a78b4de6c37a067e5b}\label{class_quadrilateral_acc2dd41d833e41a78b4de6c37a067e5b} 
+void {\bfseries Init} ()
+\begin{DoxyCompactList}\small\item\em default initialization of the object \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_quadrilateral_a539dc6734368852fc70d23657334a4b4}{Init}} (const \mbox{\hyperlink{class_quadrilateral}{Quadrilateral}} \&o)
+\begin{DoxyCompactList}\small\item\em initialization of the object as a copy of an object \end{DoxyCompactList}\item 
+\Hypertarget{class_quadrilateral_afee9bfd30c500061d24502176ef7570b}\label{class_quadrilateral_afee9bfd30c500061d24502176ef7570b} 
+void {\bfseries Reset} ()
+\begin{DoxyCompactList}\small\item\em total reset of the object ~\newline
+ \end{DoxyCompactList}\end{DoxyCompactItemize}
+\end{Indent}
+\begin{Indent}\textbf{ GETTERS}\par
+\begin{DoxyCompactItemize}
+\item 
+float \mbox{\hyperlink{class_quadrilateral_a4d0afef1a810ae52d4bca7f6da77d0fa}{Get\+Area}} ()
+\begin{DoxyCompactList}\small\item\em get the area of the object \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{class_quadrilateral_a42e9382f888dcf5fe4f44efa8777b207}{Get\+Perimeter}} ()
+\begin{DoxyCompactList}\small\item\em get the perimeter of the object \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_quadrilateral_a186a83640ecf00d6e8fc33f0b8fad2e9}{Get\+Sides}} (float \&s0, float \&s1, float \&s2, float \&s3)
+\begin{DoxyCompactList}\small\item\em get the sides of the object \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_quadrilateral_a10b1e3f30d6158658175dc2b50273f13}{Get\+Text\+Area}} (\mbox{\hyperlink{struct_text_area}{Text\+Area}} \&ta)
+\begin{DoxyCompactList}\small\item\em get the info about the text area \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_quadrilateral_ac347869fbc3a0c8804b10ddb1867a7cc}{Get\+Text}} (char \texorpdfstring{$\ast$}{*}text)
+\begin{DoxyCompactList}\small\item\em get the text of the text area \end{DoxyCompactList}\item 
+unsigned int \mbox{\hyperlink{class_quadrilateral_a34f831efc8e9227154a67ea7fd08e6d0}{Get\+Font\+Size}} ()
+\begin{DoxyCompactList}\small\item\em get the font size of the text area \end{DoxyCompactList}\end{DoxyCompactItemize}
+\end{Indent}
+\begin{Indent}\textbf{ SETTERS}\par
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_quadrilateral_aee9b3f21cc1113dc69aadae03d3fed7b}{Set\+Text\+Area}} (\mbox{\hyperlink{struct_text_area}{Text\+Area}} ta)
+\begin{DoxyCompactList}\small\item\em set the text area of the object \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_quadrilateral_acd2e7851d5857701e7d6ceeb0aefe0a5}{Set\+Text}} (char \texorpdfstring{$\ast$}{*}text)
+\begin{DoxyCompactList}\small\item\em set the text of the text area \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_quadrilateral_a34cc0d361a5b514d1d2ad0a1c611e87f}{Set\+Font\+Size}} (unsigned int size)
+\begin{DoxyCompactList}\small\item\em set the font size of the text area \end{DoxyCompactList}\end{DoxyCompactItemize}
+\end{Indent}
+\begin{Indent}\textbf{ DEBUG and SERIALIZATION}\par
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_quadrilateral_a1e9ca244bd328f91f6da0da851136161}{Error\+Message}} (const char \texorpdfstring{$\ast$}{*}string)
+\begin{DoxyCompactList}\small\item\em write an error message \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_quadrilateral_a7b245af4f468e9f55e93a96248f7cd2b}{Warning\+Message}} (const char \texorpdfstring{$\ast$}{*}string)
+\begin{DoxyCompactList}\small\item\em write a warning message \end{DoxyCompactList}\item 
+\Hypertarget{class_quadrilateral_a2bbcb0016f9ca3f928fea67775c0e15e}\label{class_quadrilateral_a2bbcb0016f9ca3f928fea67775c0e15e} 
+void {\bfseries Dump} ()
+\begin{DoxyCompactList}\small\item\em for debugging\+: all about the object \end{DoxyCompactList}\end{DoxyCompactItemize}
+\end{Indent}
+\doxysubsubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_quadrilateral_ad1920bcab851f19882250633d81e25f7}{Set\+Sides}} (float s1, float s2, float s3, float s4)
+\begin{DoxyCompactList}\small\item\em sets the value of the four sides \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_quadrilateral_a1758950fdab8e543d47c06d2062c6734}\label{class_quadrilateral_a1758950fdab8e543d47c06d2062c6734} 
+float {\bfseries sides} \mbox{[}4\mbox{]}
+\item 
+\Hypertarget{class_quadrilateral_a2dfff3d463088272f7234bccea707ded}\label{class_quadrilateral_a2dfff3d463088272f7234bccea707ded} 
+\mbox{\hyperlink{struct_text_area}{Text\+Area}} \texorpdfstring{$\ast$}{*} {\bfseries tarea}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{PURE VIRTUAL FUNCTIONS}
+\begin{DoxyCompactItemize}
+\item 
+virtual float \mbox{\hyperlink{class_quadrilateral_af42884fcf68123c888a0868c766ef7ae}{Area}} ()=0
+\item 
+virtual void \mbox{\hyperlink{class_quadrilateral_a4ec84032648ceb39bfd00f5313d8bf65}{Drawing}} ()=0
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+an abstract base class for quadrilateral 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_quadrilateral_a97514417778deb314b4d8a0f81a240ef}\label{class_quadrilateral_a97514417778deb314b4d8a0f81a240ef} 
+\index{Quadrilateral@{Quadrilateral}!Quadrilateral@{Quadrilateral}}
+\index{Quadrilateral@{Quadrilateral}!Quadrilateral@{Quadrilateral}}
+\doxysubsubsection{\texorpdfstring{Quadrilateral()}{Quadrilateral()}}
+{\footnotesize\ttfamily Quadrilateral\+::\+Quadrilateral (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_quadrilateral}{Quadrilateral}} \&}]{o }\end{DoxyParamCaption})}
+
+
+
+copy constructor 
+
+
+\begin{DoxyParams}{Parameters}
+{\em o} & reference to the object that should be copied ~\newline
+ \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_quadrilateral_af42884fcf68123c888a0868c766ef7ae}\label{class_quadrilateral_af42884fcf68123c888a0868c766ef7ae} 
+\index{Quadrilateral@{Quadrilateral}!Area@{Area}}
+\index{Area@{Area}!Quadrilateral@{Quadrilateral}}
+\doxysubsubsection{\texorpdfstring{Area()}{Area()}}
+{\footnotesize\ttfamily virtual float Quadrilateral\+::\+Area (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [pure virtual]}}
+
+
+
+Implemented in \mbox{\hyperlink{class_rectangle_aed4c43426fb45197d02dc8f2d16b243d}{Rectangle}}, and \mbox{\hyperlink{class_rhombus_a4fde5c013cccfb15f00b4432e07ca475}{Rhombus}}.
+
+\Hypertarget{class_quadrilateral_a4ec84032648ceb39bfd00f5313d8bf65}\label{class_quadrilateral_a4ec84032648ceb39bfd00f5313d8bf65} 
+\index{Quadrilateral@{Quadrilateral}!Drawing@{Drawing}}
+\index{Drawing@{Drawing}!Quadrilateral@{Quadrilateral}}
+\doxysubsubsection{\texorpdfstring{Drawing()}{Drawing()}}
+{\footnotesize\ttfamily virtual void Quadrilateral\+::\+Drawing (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \mbox{\hyperlink{class_rectangle_a6bcab37013c6936b797534e4b026cf63}{Rectangle}}, and \mbox{\hyperlink{class_rhombus_a44508ffdb46e057b916cd86a76d863e5}{Rhombus}}.
+
+\Hypertarget{class_quadrilateral_a1e9ca244bd328f91f6da0da851136161}\label{class_quadrilateral_a1e9ca244bd328f91f6da0da851136161} 
+\index{Quadrilateral@{Quadrilateral}!ErrorMessage@{ErrorMessage}}
+\index{ErrorMessage@{ErrorMessage}!Quadrilateral@{Quadrilateral}}
+\doxysubsubsection{\texorpdfstring{ErrorMessage()}{ErrorMessage()}}
+{\footnotesize\ttfamily void Quadrilateral\+::\+Error\+Message (\begin{DoxyParamCaption}\item[{const char \texorpdfstring{$\ast$}{*}}]{string }\end{DoxyParamCaption})}
+
+
+
+write an error message 
+
+
+\begin{DoxyParams}{Parameters}
+{\em string} & message to be printed \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_quadrilateral_a4d0afef1a810ae52d4bca7f6da77d0fa}\label{class_quadrilateral_a4d0afef1a810ae52d4bca7f6da77d0fa} 
+\index{Quadrilateral@{Quadrilateral}!GetArea@{GetArea}}
+\index{GetArea@{GetArea}!Quadrilateral@{Quadrilateral}}
+\doxysubsubsection{\texorpdfstring{GetArea()}{GetArea()}}
+{\footnotesize\ttfamily float Quadrilateral\+::\+Get\+Area (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+get the area of the object 
+
+\begin{DoxyReturn}{Returns}
+area ~\newline
+ 
+\end{DoxyReturn}
+\Hypertarget{class_quadrilateral_a34f831efc8e9227154a67ea7fd08e6d0}\label{class_quadrilateral_a34f831efc8e9227154a67ea7fd08e6d0} 
+\index{Quadrilateral@{Quadrilateral}!GetFontSize@{GetFontSize}}
+\index{GetFontSize@{GetFontSize}!Quadrilateral@{Quadrilateral}}
+\doxysubsubsection{\texorpdfstring{GetFontSize()}{GetFontSize()}}
+{\footnotesize\ttfamily unsigned int Quadrilateral\+::\+Get\+Font\+Size (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+get the font size of the text area 
+
+\begin{DoxyReturn}{Returns}
+the font size 
+\end{DoxyReturn}
+\Hypertarget{class_quadrilateral_a42e9382f888dcf5fe4f44efa8777b207}\label{class_quadrilateral_a42e9382f888dcf5fe4f44efa8777b207} 
+\index{Quadrilateral@{Quadrilateral}!GetPerimeter@{GetPerimeter}}
+\index{GetPerimeter@{GetPerimeter}!Quadrilateral@{Quadrilateral}}
+\doxysubsubsection{\texorpdfstring{GetPerimeter()}{GetPerimeter()}}
+{\footnotesize\ttfamily float Quadrilateral\+::\+Get\+Perimeter (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+get the perimeter of the object 
+
+\begin{DoxyReturn}{Returns}
+perimeter ~\newline
+ 
+\end{DoxyReturn}
+\Hypertarget{class_quadrilateral_a186a83640ecf00d6e8fc33f0b8fad2e9}\label{class_quadrilateral_a186a83640ecf00d6e8fc33f0b8fad2e9} 
+\index{Quadrilateral@{Quadrilateral}!GetSides@{GetSides}}
+\index{GetSides@{GetSides}!Quadrilateral@{Quadrilateral}}
+\doxysubsubsection{\texorpdfstring{GetSides()}{GetSides()}}
+{\footnotesize\ttfamily void Quadrilateral\+::\+Get\+Sides (\begin{DoxyParamCaption}\item[{float \&}]{s0,  }\item[{float \&}]{s1,  }\item[{float \&}]{s2,  }\item[{float \&}]{s3 }\end{DoxyParamCaption})}
+
+
+
+get the sides of the object 
+
+
+\begin{DoxyParams}{Parameters}
+{\em s0} & side 0 \\
+\hline
+{\em s1} & side 1 \\
+\hline
+{\em s2} & side 2 \\
+\hline
+{\em s3} & side 3 ~\newline
+ \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_quadrilateral_ac347869fbc3a0c8804b10ddb1867a7cc}\label{class_quadrilateral_ac347869fbc3a0c8804b10ddb1867a7cc} 
+\index{Quadrilateral@{Quadrilateral}!GetText@{GetText}}
+\index{GetText@{GetText}!Quadrilateral@{Quadrilateral}}
+\doxysubsubsection{\texorpdfstring{GetText()}{GetText()}}
+{\footnotesize\ttfamily void Quadrilateral\+::\+Get\+Text (\begin{DoxyParamCaption}\item[{char \texorpdfstring{$\ast$}{*}}]{text }\end{DoxyParamCaption})}
+
+
+
+get the text of the text area 
+
+
+\begin{DoxyParams}{Parameters}
+{\em text} & the string used in the text area ~\newline
+ \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_quadrilateral_a10b1e3f30d6158658175dc2b50273f13}\label{class_quadrilateral_a10b1e3f30d6158658175dc2b50273f13} 
+\index{Quadrilateral@{Quadrilateral}!GetTextArea@{GetTextArea}}
+\index{GetTextArea@{GetTextArea}!Quadrilateral@{Quadrilateral}}
+\doxysubsubsection{\texorpdfstring{GetTextArea()}{GetTextArea()}}
+{\footnotesize\ttfamily void Quadrilateral\+::\+Get\+Text\+Area (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_text_area}{Text\+Area}} \&}]{ta }\end{DoxyParamCaption})}
+
+
+
+get the info about the text area 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ta} & a struct of type \doxylink{struct_text_area}{Text\+Area} to be filled \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_quadrilateral_a539dc6734368852fc70d23657334a4b4}\label{class_quadrilateral_a539dc6734368852fc70d23657334a4b4} 
+\index{Quadrilateral@{Quadrilateral}!Init@{Init}}
+\index{Init@{Init}!Quadrilateral@{Quadrilateral}}
+\doxysubsubsection{\texorpdfstring{Init()}{Init()}}
+{\footnotesize\ttfamily void Quadrilateral\+::\+Init (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_quadrilateral}{Quadrilateral}} \&}]{o }\end{DoxyParamCaption})}
+
+
+
+initialization of the object as a copy of an object 
+
+
+\begin{DoxyParams}{Parameters}
+{\em r} & reference to the object that should be copied ~\newline
+ \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_quadrilateral_a5e95fb0b6dc309773c6f45b1e7453b21}\label{class_quadrilateral_a5e95fb0b6dc309773c6f45b1e7453b21} 
+\index{Quadrilateral@{Quadrilateral}!operator=@{operator=}}
+\index{operator=@{operator=}!Quadrilateral@{Quadrilateral}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_quadrilateral}{Quadrilateral}} \& Quadrilateral\+::operator= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_quadrilateral}{Quadrilateral}} \&}]{o }\end{DoxyParamCaption})}
+
+
+
+overload of operator = 
+
+
+\begin{DoxyParams}{Parameters}
+{\em o} & reference to the object on the right side of the operator \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+reference to the object on the left side of the operator ~\newline
+ 
+\end{DoxyReturn}
+\Hypertarget{class_quadrilateral_a40290e9a1394cb238b41fc020d0010d8}\label{class_quadrilateral_a40290e9a1394cb238b41fc020d0010d8} 
+\index{Quadrilateral@{Quadrilateral}!operator==@{operator==}}
+\index{operator==@{operator==}!Quadrilateral@{Quadrilateral}}
+\doxysubsubsection{\texorpdfstring{operator==()}{operator==()}}
+{\footnotesize\ttfamily bool Quadrilateral\+::operator== (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_quadrilateral}{Quadrilateral}} \&}]{o }\end{DoxyParamCaption})}
+
+
+
+overload of operator == 
+
+
+\begin{DoxyParams}{Parameters}
+{\em o} & reference to the object on the right side of the operator \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+always false ~\newline
+ 
+\end{DoxyReturn}
+\Hypertarget{class_quadrilateral_a34cc0d361a5b514d1d2ad0a1c611e87f}\label{class_quadrilateral_a34cc0d361a5b514d1d2ad0a1c611e87f} 
+\index{Quadrilateral@{Quadrilateral}!SetFontSize@{SetFontSize}}
+\index{SetFontSize@{SetFontSize}!Quadrilateral@{Quadrilateral}}
+\doxysubsubsection{\texorpdfstring{SetFontSize()}{SetFontSize()}}
+{\footnotesize\ttfamily void Quadrilateral\+::\+Set\+Font\+Size (\begin{DoxyParamCaption}\item[{unsigned int}]{size }\end{DoxyParamCaption})}
+
+
+
+set the font size of the text area 
+
+
+\begin{DoxyParams}{Parameters}
+{\em size} & the font size ~\newline
+ \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_quadrilateral_ad1920bcab851f19882250633d81e25f7}\label{class_quadrilateral_ad1920bcab851f19882250633d81e25f7} 
+\index{Quadrilateral@{Quadrilateral}!SetSides@{SetSides}}
+\index{SetSides@{SetSides}!Quadrilateral@{Quadrilateral}}
+\doxysubsubsection{\texorpdfstring{SetSides()}{SetSides()}}
+{\footnotesize\ttfamily void Quadrilateral\+::\+Set\+Sides (\begin{DoxyParamCaption}\item[{float}]{s1,  }\item[{float}]{s2,  }\item[{float}]{s3,  }\item[{float}]{s4 }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+sets the value of the four sides 
+
+
+\begin{DoxyParams}{Parameters}
+{\em s1} & side 1 \\
+\hline
+{\em s2} & side 2 \\
+\hline
+{\em s3} & side 3 \\
+\hline
+{\em s4} & side 4 ~\newline
+ \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_quadrilateral_acd2e7851d5857701e7d6ceeb0aefe0a5}\label{class_quadrilateral_acd2e7851d5857701e7d6ceeb0aefe0a5} 
+\index{Quadrilateral@{Quadrilateral}!SetText@{SetText}}
+\index{SetText@{SetText}!Quadrilateral@{Quadrilateral}}
+\doxysubsubsection{\texorpdfstring{SetText()}{SetText()}}
+{\footnotesize\ttfamily void Quadrilateral\+::\+Set\+Text (\begin{DoxyParamCaption}\item[{char \texorpdfstring{$\ast$}{*}}]{text }\end{DoxyParamCaption})}
+
+
+
+set the text of the text area 
+
+
+\begin{DoxyParams}{Parameters}
+{\em text} & the text \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_quadrilateral_aee9b3f21cc1113dc69aadae03d3fed7b}\label{class_quadrilateral_aee9b3f21cc1113dc69aadae03d3fed7b} 
+\index{Quadrilateral@{Quadrilateral}!SetTextArea@{SetTextArea}}
+\index{SetTextArea@{SetTextArea}!Quadrilateral@{Quadrilateral}}
+\doxysubsubsection{\texorpdfstring{SetTextArea()}{SetTextArea()}}
+{\footnotesize\ttfamily void Quadrilateral\+::\+Set\+Text\+Area (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_text_area}{Text\+Area}}}]{ta }\end{DoxyParamCaption})}
+
+
+
+set the text area of the object 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ta} & a struct of type \doxylink{struct_text_area}{Text\+Area} filled with a text and a font size \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_quadrilateral_a7b245af4f468e9f55e93a96248f7cd2b}\label{class_quadrilateral_a7b245af4f468e9f55e93a96248f7cd2b} 
+\index{Quadrilateral@{Quadrilateral}!WarningMessage@{WarningMessage}}
+\index{WarningMessage@{WarningMessage}!Quadrilateral@{Quadrilateral}}
+\doxysubsubsection{\texorpdfstring{WarningMessage()}{WarningMessage()}}
+{\footnotesize\ttfamily void Quadrilateral\+::\+Warning\+Message (\begin{DoxyParamCaption}\item[{const char \texorpdfstring{$\ast$}{*}}]{string }\end{DoxyParamCaption})}
+
+
+
+write a warning message 
+
+
+\begin{DoxyParams}{Parameters}
+{\em string} & message to be printed \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_c_quadrilateral_8h}{CQuadrilateral.\+h}}\item 
+CQuadrilateral.\+cpp\end{DoxyCompactItemize}

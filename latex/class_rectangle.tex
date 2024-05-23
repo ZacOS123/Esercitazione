@@ -1,0 +1,442 @@
+\doxysection{Rectangle Class Reference}
+\hypertarget{class_rectangle}{}\label{class_rectangle}\index{Rectangle@{Rectangle}}
+
+
+to manage an object with the shape of a rectangle  
+
+
+
+
+{\ttfamily \#include $<$CRectangle.\+h$>$}
+
+Inheritance diagram for Rectangle\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_rectangle}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{Indent}\textbf{ CONSTRUCTORS/\+DESTRUCTOR}\par
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_rectangle_a8a933e0ebd9e80ce91e61ffe87fd577e}\label{class_rectangle_a8a933e0ebd9e80ce91e61ffe87fd577e} 
+{\bfseries Rectangle} ()
+\begin{DoxyCompactList}\small\item\em default constructor \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_rectangle_a39fe503e448b59d2f8eba94b4cb2adf7}{Rectangle}} (float w, float l)
+\begin{DoxyCompactList}\small\item\em constructor \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_rectangle_ae9d55e40abe13e202bbaa34b37134804}{Rectangle}} (float w, float l, \mbox{\hyperlink{struct_text_area}{Text\+Area}} ta)
+\begin{DoxyCompactList}\small\item\em constructor \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_rectangle_a4121f6f88daff89334d0c051c718f164}{Rectangle}} (const \mbox{\hyperlink{class_rectangle}{Rectangle}} \&r)
+\begin{DoxyCompactList}\small\item\em copy constructor \end{DoxyCompactList}\item 
+\Hypertarget{class_rectangle_a494c076b13aadf26efdce07d23c61ddd}\label{class_rectangle_a494c076b13aadf26efdce07d23c61ddd} 
+{\bfseries \texorpdfstring{$\sim$}{\string~}\+Rectangle} ()
+\begin{DoxyCompactList}\small\item\em destructor \end{DoxyCompactList}\end{DoxyCompactItemize}
+\end{Indent}
+\begin{Indent}\textbf{ OPERATORS}\par
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_rectangle}{Rectangle}} \& \mbox{\hyperlink{class_rectangle_aa121f214bf457c1dfe038b995d859010}{operator=}} (const \mbox{\hyperlink{class_rectangle}{Rectangle}} \&r)
+\begin{DoxyCompactList}\small\item\em overload of operator = \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_rectangle_ae396a76b0812c2020a00877372ba66ab}{operator==}} (const \mbox{\hyperlink{class_rectangle}{Rectangle}} \&r)
+\begin{DoxyCompactList}\small\item\em overload of operator == \end{DoxyCompactList}\end{DoxyCompactItemize}
+\end{Indent}
+\begin{Indent}\textbf{ BASIC HANDLING}\par
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_rectangle_a8455713eb235a92116c6a0aa704c713b}\label{class_rectangle_a8455713eb235a92116c6a0aa704c713b} 
+void {\bfseries Init} ()
+\begin{DoxyCompactList}\small\item\em default initialization of the object \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_rectangle_aa3c2f8749d438cc4180c268cdcde3108}{Init}} (const \mbox{\hyperlink{class_rectangle}{Rectangle}} \&r)
+\begin{DoxyCompactList}\small\item\em initialization of the object as a copy of an object \end{DoxyCompactList}\item 
+\Hypertarget{class_rectangle_a45c65472be80b81368fffa9386b5485d}\label{class_rectangle_a45c65472be80b81368fffa9386b5485d} 
+void {\bfseries Reset} ()
+\begin{DoxyCompactList}\small\item\em total reset of the object ~\newline
+ \end{DoxyCompactList}\end{DoxyCompactItemize}
+\end{Indent}
+\begin{Indent}\textbf{ GETTERS / SETTERS}\par
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_rectangle_a6b3191ad8cb3f28015628541161a198d}{Set\+Height}} (float h)
+\begin{DoxyCompactList}\small\item\em set length of the object \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_rectangle_aebfe60964fa3eeb8d8c1077e17fafc2d}{Set\+Width}} (float w)
+\begin{DoxyCompactList}\small\item\em set width of the object \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_rectangle_ac4dc45e2cce4bbeba3e91c09216a27f8}{Set\+Dim}} (float w, float h)
+\begin{DoxyCompactList}\small\item\em set width and length of the object \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_rectangle_aa3663decf8e564de6d8f6605baff1748}{Get\+Dim}} (float \&w, float \&h)
+\begin{DoxyCompactList}\small\item\em get width and length of the object \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{class_rectangle_a7a884a98a16e622bd21c85f16401bfab}{Get\+Height}} ()
+\begin{DoxyCompactList}\small\item\em get length of the object \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{class_rectangle_a23580f0549823ebeff01c2b1cd4a443e}{Get\+Width}} ()
+\begin{DoxyCompactList}\small\item\em get width of the object \end{DoxyCompactList}\end{DoxyCompactItemize}
+\end{Indent}
+\begin{Indent}\textbf{ DEBUG and SERIALIZATION}\par
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_rectangle_a9de2706bfab0c94c3cc8725b7d7f2331}{Error\+Message}} (const char \texorpdfstring{$\ast$}{*}string)
+\begin{DoxyCompactList}\small\item\em write an error message \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_rectangle_aec8884b09d8798d52f1eed6849da3daa}{Warning\+Message}} (const char \texorpdfstring{$\ast$}{*}string)
+\begin{DoxyCompactList}\small\item\em write a warning message \end{DoxyCompactList}\item 
+\Hypertarget{class_rectangle_a0dafa5772765545f3100655168b04dc7}\label{class_rectangle_a0dafa5772765545f3100655168b04dc7} 
+void {\bfseries Dump} ()
+\begin{DoxyCompactList}\small\item\em for debugging\+: all about the object \end{DoxyCompactList}\end{DoxyCompactItemize}
+\end{Indent}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_quadrilateral}{Quadrilateral}}}
+\begin{DoxyCompactItemize}
+\item 
+{\bfseries Quadrilateral} ()
+\begin{DoxyCompactList}\small\item\em default constructor \end{DoxyCompactList}\item 
+{\bfseries Quadrilateral} (\mbox{\hyperlink{struct_text_area}{Text\+Area}} ta)
+\begin{DoxyCompactList}\small\item\em constructor ta a struct of type \doxylink{struct_text_area}{Text\+Area} with infos on text and font size \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_quadrilateral_a97514417778deb314b4d8a0f81a240ef}{Quadrilateral}} (const \mbox{\hyperlink{class_quadrilateral}{Quadrilateral}} \&o)
+\begin{DoxyCompactList}\small\item\em copy constructor \end{DoxyCompactList}\item 
+virtual {\bfseries \texorpdfstring{$\sim$}{\string~}\+Quadrilateral} ()
+\begin{DoxyCompactList}\small\item\em destructor \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_quadrilateral}{Quadrilateral}} \& \mbox{\hyperlink{class_quadrilateral_a5e95fb0b6dc309773c6f45b1e7453b21}{operator=}} (const \mbox{\hyperlink{class_quadrilateral}{Quadrilateral}} \&o)
+\begin{DoxyCompactList}\small\item\em overload of operator = \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_quadrilateral_a40290e9a1394cb238b41fc020d0010d8}{operator==}} (const \mbox{\hyperlink{class_quadrilateral}{Quadrilateral}} \&o)
+\begin{DoxyCompactList}\small\item\em overload of operator == \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactItemize}
+\item 
+void {\bfseries Init} ()
+\begin{DoxyCompactList}\small\item\em default initialization of the object \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_quadrilateral_a539dc6734368852fc70d23657334a4b4}{Init}} (const \mbox{\hyperlink{class_quadrilateral}{Quadrilateral}} \&o)
+\begin{DoxyCompactList}\small\item\em initialization of the object as a copy of an object \end{DoxyCompactList}\item 
+void {\bfseries Reset} ()
+\begin{DoxyCompactList}\small\item\em total reset of the object ~\newline
+ \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactItemize}
+\item 
+float \mbox{\hyperlink{class_quadrilateral_a4d0afef1a810ae52d4bca7f6da77d0fa}{Get\+Area}} ()
+\begin{DoxyCompactList}\small\item\em get the area of the object \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{class_quadrilateral_a42e9382f888dcf5fe4f44efa8777b207}{Get\+Perimeter}} ()
+\begin{DoxyCompactList}\small\item\em get the perimeter of the object \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_quadrilateral_a186a83640ecf00d6e8fc33f0b8fad2e9}{Get\+Sides}} (float \&s0, float \&s1, float \&s2, float \&s3)
+\begin{DoxyCompactList}\small\item\em get the sides of the object \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_quadrilateral_a10b1e3f30d6158658175dc2b50273f13}{Get\+Text\+Area}} (\mbox{\hyperlink{struct_text_area}{Text\+Area}} \&ta)
+\begin{DoxyCompactList}\small\item\em get the info about the text area \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_quadrilateral_ac347869fbc3a0c8804b10ddb1867a7cc}{Get\+Text}} (char \texorpdfstring{$\ast$}{*}text)
+\begin{DoxyCompactList}\small\item\em get the text of the text area \end{DoxyCompactList}\item 
+unsigned int \mbox{\hyperlink{class_quadrilateral_a34f831efc8e9227154a67ea7fd08e6d0}{Get\+Font\+Size}} ()
+\begin{DoxyCompactList}\small\item\em get the font size of the text area \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_quadrilateral_aee9b3f21cc1113dc69aadae03d3fed7b}{Set\+Text\+Area}} (\mbox{\hyperlink{struct_text_area}{Text\+Area}} ta)
+\begin{DoxyCompactList}\small\item\em set the text area of the object \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_quadrilateral_acd2e7851d5857701e7d6ceeb0aefe0a5}{Set\+Text}} (char \texorpdfstring{$\ast$}{*}text)
+\begin{DoxyCompactList}\small\item\em set the text of the text area \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_quadrilateral_a34cc0d361a5b514d1d2ad0a1c611e87f}{Set\+Font\+Size}} (unsigned int size)
+\begin{DoxyCompactList}\small\item\em set the font size of the text area \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_quadrilateral_a1e9ca244bd328f91f6da0da851136161}{Error\+Message}} (const char \texorpdfstring{$\ast$}{*}string)
+\begin{DoxyCompactList}\small\item\em write an error message \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_quadrilateral_a7b245af4f468e9f55e93a96248f7cd2b}{Warning\+Message}} (const char \texorpdfstring{$\ast$}{*}string)
+\begin{DoxyCompactList}\small\item\em write a warning message \end{DoxyCompactList}\item 
+void {\bfseries Dump} ()
+\begin{DoxyCompactList}\small\item\em for debugging\+: all about the object \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_rectangle_a080c1530eb46073e9880b01d14c341fd}\label{class_rectangle_a080c1530eb46073e9880b01d14c341fd} 
+float {\bfseries height}
+\item 
+\Hypertarget{class_rectangle_adbe8ae69919acc459e7ab155a69bc8ff}\label{class_rectangle_adbe8ae69919acc459e7ab155a69bc8ff} 
+float {\bfseries width}
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes inherited from \mbox{\hyperlink{class_quadrilateral}{Quadrilateral}}}
+\begin{DoxyCompactItemize}
+\item 
+float {\bfseries sides} \mbox{[}4\mbox{]}
+\item 
+\mbox{\hyperlink{struct_text_area}{Text\+Area}} \texorpdfstring{$\ast$}{*} {\bfseries tarea}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{PURE VIRTUAL FUNCTIONS -\/ IMPLEMENTATION}
+\begin{DoxyCompactItemize}
+\item 
+float \mbox{\hyperlink{class_rectangle_aed4c43426fb45197d02dc8f2d16b243d}{Area}} ()
+\begin{DoxyCompactList}\small\item\em computes the area of the object \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_rectangle_a6bcab37013c6936b797534e4b026cf63}{Drawing}} ()
+\begin{DoxyCompactList}\small\item\em to draw a rectangle \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Protected Member Functions inherited from \mbox{\hyperlink{class_quadrilateral}{Quadrilateral}}}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_quadrilateral_ad1920bcab851f19882250633d81e25f7}{Set\+Sides}} (float s1, float s2, float s3, float s4)
+\begin{DoxyCompactList}\small\item\em sets the value of the four sides \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+to manage an object with the shape of a rectangle 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_rectangle_a39fe503e448b59d2f8eba94b4cb2adf7}\label{class_rectangle_a39fe503e448b59d2f8eba94b4cb2adf7} 
+\index{Rectangle@{Rectangle}!Rectangle@{Rectangle}}
+\index{Rectangle@{Rectangle}!Rectangle@{Rectangle}}
+\doxysubsubsection{\texorpdfstring{Rectangle()}{Rectangle()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily Rectangle\+::\+Rectangle (\begin{DoxyParamCaption}\item[{float}]{w,  }\item[{float}]{h }\end{DoxyParamCaption})}
+
+
+
+constructor 
+
+
+\begin{DoxyParams}{Parameters}
+{\em w} & width of the rectangle \\
+\hline
+{\em h} & height of the rectangle \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_rectangle_ae9d55e40abe13e202bbaa34b37134804}\label{class_rectangle_ae9d55e40abe13e202bbaa34b37134804} 
+\index{Rectangle@{Rectangle}!Rectangle@{Rectangle}}
+\index{Rectangle@{Rectangle}!Rectangle@{Rectangle}}
+\doxysubsubsection{\texorpdfstring{Rectangle()}{Rectangle()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily Rectangle\+::\+Rectangle (\begin{DoxyParamCaption}\item[{float}]{w,  }\item[{float}]{h,  }\item[{\mbox{\hyperlink{struct_text_area}{Text\+Area}}}]{ta }\end{DoxyParamCaption})}
+
+
+
+constructor 
+
+
+\begin{DoxyParams}{Parameters}
+{\em w} & width of the rectangle \\
+\hline
+{\em h} & height of the rectangle \\
+\hline
+{\em ta} & struct of type \doxylink{struct_text_area}{Text\+Area} \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_rectangle_a4121f6f88daff89334d0c051c718f164}\label{class_rectangle_a4121f6f88daff89334d0c051c718f164} 
+\index{Rectangle@{Rectangle}!Rectangle@{Rectangle}}
+\index{Rectangle@{Rectangle}!Rectangle@{Rectangle}}
+\doxysubsubsection{\texorpdfstring{Rectangle()}{Rectangle()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily Rectangle\+::\+Rectangle (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_rectangle}{Rectangle}} \&}]{r }\end{DoxyParamCaption})}
+
+
+
+copy constructor 
+
+
+\begin{DoxyParams}{Parameters}
+{\em r} & reference to the object that should be copied ~\newline
+ \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_rectangle_aed4c43426fb45197d02dc8f2d16b243d}\label{class_rectangle_aed4c43426fb45197d02dc8f2d16b243d} 
+\index{Rectangle@{Rectangle}!Area@{Area}}
+\index{Area@{Area}!Rectangle@{Rectangle}}
+\doxysubsubsection{\texorpdfstring{Area()}{Area()}}
+{\footnotesize\ttfamily float Rectangle\+::\+Area (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+computes the area of the object 
+
+\begin{DoxyReturn}{Returns}
+the area ~\newline
+ 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{class_quadrilateral}{Quadrilateral}}.
+
+\Hypertarget{class_rectangle_a6bcab37013c6936b797534e4b026cf63}\label{class_rectangle_a6bcab37013c6936b797534e4b026cf63} 
+\index{Rectangle@{Rectangle}!Drawing@{Drawing}}
+\index{Drawing@{Drawing}!Rectangle@{Rectangle}}
+\doxysubsubsection{\texorpdfstring{Drawing()}{Drawing()}}
+{\footnotesize\ttfamily void Rectangle\+::\+Drawing (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+to draw a rectangle 
+
+
+
+Implements \mbox{\hyperlink{class_quadrilateral}{Quadrilateral}}.
+
+\Hypertarget{class_rectangle_a9de2706bfab0c94c3cc8725b7d7f2331}\label{class_rectangle_a9de2706bfab0c94c3cc8725b7d7f2331} 
+\index{Rectangle@{Rectangle}!ErrorMessage@{ErrorMessage}}
+\index{ErrorMessage@{ErrorMessage}!Rectangle@{Rectangle}}
+\doxysubsubsection{\texorpdfstring{ErrorMessage()}{ErrorMessage()}}
+{\footnotesize\ttfamily void Rectangle\+::\+Error\+Message (\begin{DoxyParamCaption}\item[{const char \texorpdfstring{$\ast$}{*}}]{string }\end{DoxyParamCaption})}
+
+
+
+write an error message 
+
+
+\begin{DoxyParams}{Parameters}
+{\em string} & message to be printed \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_rectangle_aa3663decf8e564de6d8f6605baff1748}\label{class_rectangle_aa3663decf8e564de6d8f6605baff1748} 
+\index{Rectangle@{Rectangle}!GetDim@{GetDim}}
+\index{GetDim@{GetDim}!Rectangle@{Rectangle}}
+\doxysubsubsection{\texorpdfstring{GetDim()}{GetDim()}}
+{\footnotesize\ttfamily void Rectangle\+::\+Get\+Dim (\begin{DoxyParamCaption}\item[{float \&}]{w,  }\item[{float \&}]{h }\end{DoxyParamCaption})}
+
+
+
+get width and length of the object 
+
+
+\begin{DoxyParams}{Parameters}
+{\em w} & width \\
+\hline
+{\em h} & height \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_rectangle_a7a884a98a16e622bd21c85f16401bfab}\label{class_rectangle_a7a884a98a16e622bd21c85f16401bfab} 
+\index{Rectangle@{Rectangle}!GetHeight@{GetHeight}}
+\index{GetHeight@{GetHeight}!Rectangle@{Rectangle}}
+\doxysubsubsection{\texorpdfstring{GetHeight()}{GetHeight()}}
+{\footnotesize\ttfamily float Rectangle\+::\+Get\+Height (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+get length of the object 
+
+\begin{DoxyReturn}{Returns}
+height 
+\end{DoxyReturn}
+\Hypertarget{class_rectangle_a23580f0549823ebeff01c2b1cd4a443e}\label{class_rectangle_a23580f0549823ebeff01c2b1cd4a443e} 
+\index{Rectangle@{Rectangle}!GetWidth@{GetWidth}}
+\index{GetWidth@{GetWidth}!Rectangle@{Rectangle}}
+\doxysubsubsection{\texorpdfstring{GetWidth()}{GetWidth()}}
+{\footnotesize\ttfamily float Rectangle\+::\+Get\+Width (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+get width of the object 
+
+\begin{DoxyReturn}{Returns}
+width ~\newline
+ 
+\end{DoxyReturn}
+\Hypertarget{class_rectangle_aa3c2f8749d438cc4180c268cdcde3108}\label{class_rectangle_aa3c2f8749d438cc4180c268cdcde3108} 
+\index{Rectangle@{Rectangle}!Init@{Init}}
+\index{Init@{Init}!Rectangle@{Rectangle}}
+\doxysubsubsection{\texorpdfstring{Init()}{Init()}}
+{\footnotesize\ttfamily void Rectangle\+::\+Init (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_rectangle}{Rectangle}} \&}]{r }\end{DoxyParamCaption})}
+
+
+
+initialization of the object as a copy of an object 
+
+
+\begin{DoxyParams}{Parameters}
+{\em r} & reference to the object that should be copied ~\newline
+ \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_rectangle_aa121f214bf457c1dfe038b995d859010}\label{class_rectangle_aa121f214bf457c1dfe038b995d859010} 
+\index{Rectangle@{Rectangle}!operator=@{operator=}}
+\index{operator=@{operator=}!Rectangle@{Rectangle}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_rectangle}{Rectangle}} \& Rectangle\+::operator= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_rectangle}{Rectangle}} \&}]{r }\end{DoxyParamCaption})}
+
+
+
+overload of operator = 
+
+
+\begin{DoxyParams}{Parameters}
+{\em o} & reference to the object on the right side of the operator \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+reference to the object on the left side of the operator ~\newline
+ 
+\end{DoxyReturn}
+\Hypertarget{class_rectangle_ae396a76b0812c2020a00877372ba66ab}\label{class_rectangle_ae396a76b0812c2020a00877372ba66ab} 
+\index{Rectangle@{Rectangle}!operator==@{operator==}}
+\index{operator==@{operator==}!Rectangle@{Rectangle}}
+\doxysubsubsection{\texorpdfstring{operator==()}{operator==()}}
+{\footnotesize\ttfamily bool Rectangle\+::operator== (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_rectangle}{Rectangle}} \&}]{r }\end{DoxyParamCaption})}
+
+
+
+overload of operator == 
+
+
+\begin{DoxyParams}{Parameters}
+{\em r} & reference to the object on the right side of the operator \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if the two objects have the same width, the same length, the same text and the same font size 
+\end{DoxyReturn}
+\Hypertarget{class_rectangle_ac4dc45e2cce4bbeba3e91c09216a27f8}\label{class_rectangle_ac4dc45e2cce4bbeba3e91c09216a27f8} 
+\index{Rectangle@{Rectangle}!SetDim@{SetDim}}
+\index{SetDim@{SetDim}!Rectangle@{Rectangle}}
+\doxysubsubsection{\texorpdfstring{SetDim()}{SetDim()}}
+{\footnotesize\ttfamily void Rectangle\+::\+Set\+Dim (\begin{DoxyParamCaption}\item[{float}]{w,  }\item[{float}]{h }\end{DoxyParamCaption})}
+
+
+
+set width and length of the object 
+
+
+\begin{DoxyParams}{Parameters}
+{\em w} & width \\
+\hline
+{\em h} & height \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_rectangle_a6b3191ad8cb3f28015628541161a198d}\label{class_rectangle_a6b3191ad8cb3f28015628541161a198d} 
+\index{Rectangle@{Rectangle}!SetHeight@{SetHeight}}
+\index{SetHeight@{SetHeight}!Rectangle@{Rectangle}}
+\doxysubsubsection{\texorpdfstring{SetHeight()}{SetHeight()}}
+{\footnotesize\ttfamily void Rectangle\+::\+Set\+Height (\begin{DoxyParamCaption}\item[{float}]{h }\end{DoxyParamCaption})}
+
+
+
+set length of the object 
+
+
+\begin{DoxyParams}{Parameters}
+{\em h} & height ~\newline
+ \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_rectangle_aebfe60964fa3eeb8d8c1077e17fafc2d}\label{class_rectangle_aebfe60964fa3eeb8d8c1077e17fafc2d} 
+\index{Rectangle@{Rectangle}!SetWidth@{SetWidth}}
+\index{SetWidth@{SetWidth}!Rectangle@{Rectangle}}
+\doxysubsubsection{\texorpdfstring{SetWidth()}{SetWidth()}}
+{\footnotesize\ttfamily void Rectangle\+::\+Set\+Width (\begin{DoxyParamCaption}\item[{float}]{w }\end{DoxyParamCaption})}
+
+
+
+set width of the object 
+
+
+\begin{DoxyParams}{Parameters}
+{\em w} & width ~\newline
+ \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_rectangle_aec8884b09d8798d52f1eed6849da3daa}\label{class_rectangle_aec8884b09d8798d52f1eed6849da3daa} 
+\index{Rectangle@{Rectangle}!WarningMessage@{WarningMessage}}
+\index{WarningMessage@{WarningMessage}!Rectangle@{Rectangle}}
+\doxysubsubsection{\texorpdfstring{WarningMessage()}{WarningMessage()}}
+{\footnotesize\ttfamily void Rectangle\+::\+Warning\+Message (\begin{DoxyParamCaption}\item[{const char \texorpdfstring{$\ast$}{*}}]{string }\end{DoxyParamCaption})}
+
+
+
+write a warning message 
+
+
+\begin{DoxyParams}{Parameters}
+{\em string} & message to be printed \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_c_rectangle_8h}{CRectangle.\+h}}\item 
+\mbox{\hyperlink{_c_rectangle_8cpp}{CRectangle.\+cpp}}\end{DoxyCompactItemize}
