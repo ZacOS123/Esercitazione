@@ -252,7 +252,9 @@ void Rhombus::Dump() {
 /// @brief to draw a rhombus
 void Rhombus::Drawing() {
 	
-	cout << "Rhombus of longer diagonal = " << diagL << " Shorter diagonal = " << diagS << " text: " << endl;
+	cout << "Rhombus of longer diagonal = " << diagL << " Shorter diagonal = " << diagS << endl;
+	cout<< ", text:  " << tarea->string << " of size : " << tarea->size << endl;
+
 
 }
 

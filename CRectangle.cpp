@@ -20,7 +20,7 @@ Rectangle::Rectangle() {
 /// @brief constructor 
 /// @param w width of the rectangle
 /// @param h height of the rectangle
-Rectangle::Rectangle(float w, float h) {
+Rectangle::Rectangle(float w, float h) :Quadrilateral(){
 
 	Init();
 
@@ -39,7 +39,7 @@ Rectangle::Rectangle(float w, float h) {
 /// @param w width of the rectangle
 /// @param h height of the rectangle 
 /// @param ta struct of type TextArea
-Rectangle::Rectangle(float w, float h, TextArea ta) {
+Rectangle::Rectangle(float w, float h, TextArea ta): Quadrilateral(ta){
 	
 	Init();
 
@@ -208,7 +208,8 @@ void Rectangle::ErrorMessage(const char *string) {
 /// @brief to draw a rectangle
 void Rectangle::Drawing() {
 	
-	cout << "Rectangle of width: "<< width << ", height:" << height << ", text size of: "<<endl;
+	cout << "Rectangle of width: " << width << ", height:" << height << endl;
+	cout << ", text:  " << tarea->string << " of size : " << tarea->size << endl;
 
 }
 
