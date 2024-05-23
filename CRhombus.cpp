@@ -94,10 +94,9 @@ Rhombus& Rhombus::operator=(const Rhombus &r) {
 /// @return true if the two objects have the same width and the same length  
 bool Rhombus::operator==(const Rhombus &r) { 
 
-	if (r.diagL == diagL && r.diagS == diagS && strcmp(r.tarea->string, tarea->string) == 0)
-
+	if (r.diagL == diagL && r.diagS == diagS && strcmp(r.tarea->string, tarea->string) == 0 && r.tarea->size == tarea->size)
 		return true;
-		
+
 	return false;
 }
 
