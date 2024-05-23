@@ -94,7 +94,8 @@ Rhombus& Rhombus::operator=(const Rhombus &r) {
 /// @return true if the two objects have the same width and the same length  
 bool Rhombus::operator==(const Rhombus &r) { 
 
-	if (r.diagL == diagL && r.diagS == diagS)
+	if (r.diagL == diagL && r.diagS == diagS && strcmp(r.tarea->string, tarea->string) == 0)
+
 		return true;
 		
 	return false;
@@ -252,8 +253,8 @@ void Rhombus::Dump() {
 /// @brief to draw a rhombus
 void Rhombus::Drawing() {
 	
-	cout << "Rhombus of longer diagonal = " << diagL << " Shorter diagonal = " << diagS << endl;
-	cout<< ", text:  " << tarea->string << " of size : " << tarea->size << endl;
+	cout << "Rhombus of longer diagonal: " << diagL << ", shorter diagonal: " << diagS << endl;
+	cout<< "With text:  " << tarea->string << " of size: " << tarea->size << endl;
 
 
 }

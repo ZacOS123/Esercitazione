@@ -54,9 +54,30 @@ int main() {
 	rectB.SetTextArea(a2);
 	rhoB.SetText(t3);
 	
-	
+	rectA.Dump();
+	rectC.Dump();
+
+	if (rectC == rectA){
+		cout << "siamo ugualiii"<<endl;
+	}
+	else
+	{
+		cout << " non siamo uguali" << endl;
+	}
+
 	Show();
 
+	rectA.SetFontSize(4);
+
+	rectA.Dump();
+
+	if (rectC == rectA) {
+		cout << "siamo ugualiii" << endl;
+	}
+	else
+	{
+		cout << " non siamo uguali" << endl;
+	}
 
 	return 0;
 

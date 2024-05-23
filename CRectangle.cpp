@@ -64,7 +64,7 @@ Rectangle::~Rectangle() {
 }
 
 /// @brief copy constructor 
-/// @param o reference to the object that should be copied 
+/// @param r reference to the object that should be copied 
 Rectangle::Rectangle(const Rectangle &r) { 
 
 	cout << "Rectangle - copy constructor" << endl;
@@ -88,10 +88,10 @@ Rectangle& Rectangle::operator=(const Rectangle &r) {
 
 /// @brief overload of operator == 
 /// @param r reference to the object on the right side of the operator 
-/// @return true if the two objects have the same width and the same length  
+/// @return true if the two objects have the same width, the same length, the same text and the same font size
 bool Rectangle::operator==(const Rectangle &r) { 
 
-	if (r.width == width && r.height == height )
+	if (r.width == width && r.height == height && strcmp(r.tarea->string, tarea->string) == 0 && r.tarea->size == tarea->size)
 		return true;
 		
 	return false;
@@ -209,7 +209,7 @@ void Rectangle::ErrorMessage(const char *string) {
 void Rectangle::Drawing() {
 	
 	cout << "Rectangle of width: " << width << ", height:" << height << endl;
-	cout << ", text:  " << tarea->string << " of size : " << tarea->size << endl;
+	cout << "With text:  " << tarea->string << " of size: " << tarea->size << endl;
 
 }
 
