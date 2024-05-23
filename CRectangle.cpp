@@ -38,10 +38,21 @@ Rectangle::Rectangle(float w, float h) {
 /// @brief constructor 
 /// @param w width of the rectangle
 /// @param h height of the rectangle 
-/// @param sf struct of type Format
+/// @param ta struct of type TextArea
 Rectangle::Rectangle(float w, float h, TextArea ta) {
-
 	
+	Init();
+
+	cout << "Rectangle - constructor" << endl;
+
+	if (w <= 0. || h <= 0.) {
+		WarningMessage("constructor: width and height should be > 0"); 
+		SetDim(0,0);
+	}
+	else{
+		SetDim(w,h);
+		SetTextArea(ta);
+	}
 }
 
 /// @brief destructor 
@@ -89,7 +100,7 @@ bool Rectangle::operator==(const Rectangle &r) {
 /// @brief default initialization of the object
 void Rectangle::Init() {
 	SetDim(0,0);
-	
+	Quadrilateral::Init();
 }
 
 
@@ -106,6 +117,7 @@ void Rectangle::Init(const Rectangle &r) {
 void Rectangle::Reset() {
 	
 	SetDim(0,0);
+	Quadrilateral::Reset();
 	
 }
 
@@ -196,7 +208,10 @@ void Rectangle::ErrorMessage(const char *string) {
 /// @brief to draw a rectangle
 void Rectangle::Drawing() {
 	
+	cout << "Rectangle of width: "<< width << ", height:" << height << ", text size of: "<<endl;
+
 }
+
 
 /// @brief write a warning message 
 /// @param string message to be printed

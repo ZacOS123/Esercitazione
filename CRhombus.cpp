@@ -39,11 +39,24 @@ Rhombus::Rhombus(float dL, float dS) {
 /// @param dL diagonal (longer)
 /// @param dS diagonal (shorter)
 /// @param ta struct of type TextArea
-Rhombus::Rhombus(float dL, float dS, TextArea ta) {
+Rhombus::Rhombus(float dL, float dS, TextArea ta) :Quadrilateral(ta) {
 
+	Init();
 
+	cout << "Rhombus - constructor" << endl;
+	SetTextArea(ta);
 
+	if (dL <= 0. || dS <= 0.) {
+		WarningMessage("constructor: diagonals should be > 0");
+		SetDim(0, 0);
+	}
+	else
+		SetDim(dL, dS);
+		SetTextArea(ta);
+	return;
 }
+
+
 
 /// @brief destructor 
 Rhombus::~Rhombus() {
@@ -107,7 +120,7 @@ void Rhombus::Init(const Rhombus &r) {
 void Rhombus::Reset() {
 	
 	SetDim(0,0);
-	
+	Quadrilateral::Reset();
 }
 
 
@@ -208,6 +221,7 @@ void Rhombus::ErrorMessage(const char *string) {
 
 }
 
+
 /// @brief write a warning message 
 /// @param string message to be printed
 void Rhombus::WarningMessage(const char *string) {
@@ -238,6 +252,7 @@ void Rhombus::Dump() {
 /// @brief to draw a rhombus
 void Rhombus::Drawing() {
 	
+	cout << "Rhombus of longer diagonal = " << diagL << " Shorter diagonal = " << diagS << " text: " << endl;
 
 }
 

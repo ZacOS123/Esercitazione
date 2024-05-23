@@ -8,6 +8,8 @@
 #ifndef QUADRILATERAL_H
 #define QUADRILATERAL_H
 
+#include <cstring>
+#include <string.h>
 #include<iostream> 
 #include "StructTextArea.h"
 
@@ -79,7 +81,7 @@ public:
 	
 	/// @name PURE VIRTUAL FUNCTIONS 
 	/// @{
-	virtual void Drawing()=0;
+	virtual void Drawing() = 0;
 	/// @}
 
 };

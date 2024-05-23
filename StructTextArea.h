@@ -12,5 +12,4 @@
 struct TextArea {
 	char string[SLEN]; // the text 
 	unsigned int size; // font size
-	
 };

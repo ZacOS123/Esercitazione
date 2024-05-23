@@ -15,11 +15,12 @@ Quadrilateral::Quadrilateral() {
 /// @brief constructor 
 /// ta a struct of type TextArea with infos on text and font size
 Quadrilateral::Quadrilateral(TextArea ta) {
-	ta.size = 0;
-	for (i = 0; i < SLEN; i++)
-	{
-		ta.string[i] = 0;
-	}
+
+	Init();
+
+	SetFontSize(ta.size);
+	SetText(ta.string);
+
 } 
 
 /// @brief copy constructor 
@@ -78,10 +79,12 @@ bool Quadrilateral::operator==(const Quadrilateral &o) {
 /// @brief default initialization of the object
 void Quadrilateral::Init() {
 	
+	char temp[SLEN] = "DEFAUlT";
 	
-	
+	tarea = new TextArea;
 	SetSides(0.,0.,0.,0.);
-	
+	SetText(temp);
+	SetFontSize(1);
 		
 }
 
@@ -96,6 +99,7 @@ void Quadrilateral::Init(const Quadrilateral &o) {
 	sides[2] = o.sides[2]; 
 	sides[3] = o.sides[3];
 	
+	SetText(o.tarea->string); /////bahhhh
 	
 }
 
@@ -143,49 +147,62 @@ void Quadrilateral::GetSides(float &s0, float &s1, float &s2, float &s3) {
 /// @brief get the info about the text area
 /// @param ta a struct of type TextArea to be filled
 void Quadrilateral::GetTextArea(TextArea &ta) {
-	return 
+	 GetText(ta.string);
+	 GetFontSize();
+	 return;
 	
 } 
 
 /// @brief get the text of the text area 
 /// @param text the string used in the text area 
 void Quadrilateral::GetText(char* text) {
-	
+	memcpy(tarea->string, text, strlen(text) + 1); //inserisco nella locazione di memoria a cui punta text la stringa di testo
 	
 }
 
 /// @brief get the font size of the text area 
 /// @return the font size
 unsigned int Quadrilateral::GetFontSize() {
-	
 
+	return tarea->size;
 }
 
 
 /// @brief set the text area of the object 
 /// @param ta a struct of type TextArea filled with a text and a font size
 void Quadrilateral::SetTextArea(TextArea ta) {
-	if (ta )
-	
+
+	 	SetText(ta.string);
+	    SetFontSize(ta.size);
+
 }
 
-/// @brief set the text of the text area 
-/// @param text the text 
+
+
+
+/// @brief set the text of the text area
+/// @param text the text
 void Quadrilateral::SetText(char* text) {
+
 	if (strlen(text) > 50)
 	{
-		cout << "You are only allowed to insert 50 caracters!!!" << endl;
+		WarningMessage("You are only allowed to insert 50 caracters!!!");
 	}
 	else
 	{
-		std:: strcpy(tarea->string, testlength);
+		
+		memcpy(tarea->string, text, strlen(text) + 1);
 	}
 }
+
+
 
 /// @brief set the font size of the text area 
 /// @param size the font size 
 void Quadrilateral::SetFontSize(unsigned int size) {
-	tarea->size = size;
+
+	tarea->size = size; 
+	
 }
 
 
@@ -211,6 +228,9 @@ void Quadrilateral::WarningMessage(const char *string) {
 
 /// @brief for debugging: all about the object
 void Quadrilateral::Dump() {
+
+	char temp[SLEN] = " ";
+	GetText(temp);
 	
 	cout << endl;
 	cout << "---Quadrilateral---" << endl; 
@@ -219,6 +239,7 @@ void Quadrilateral::Dump() {
 	cout << "Sides = " << sides[0] << "; " << sides[1] << "; " << sides[2] << "; " << sides[3] << "; " << endl;
 	cout << "Perimeter = " << GetPerimeter() << endl;
 	cout << "Area = " << GetArea() << endl;
+	cout << "text"<< temp <<endl;
 	cout << "------------------" << endl; 
 	cout << endl;
 
