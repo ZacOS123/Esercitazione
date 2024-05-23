@@ -86,6 +86,8 @@ Rectangle& Rectangle::operator=(const Rectangle &r) {
 	
 }
 
+
+
 /// @brief overload of operator == 
 /// @param r reference to the object on the right side of the operator 
 /// @return true if the two objects have the same width, the same length, the same text and the same font size
@@ -110,10 +112,11 @@ void Rectangle::Init() {
 /// @param r reference to the object that should be copied 
 void Rectangle::Init(const Rectangle &r) {
 	
-	Quadrilateral::Init(r);
+
 	SetDim(r.width,r.height);
-	
+	Quadrilateral::Init(r);	
 }
+
 
 /// @brief total reset of the object  
 void Rectangle::Reset() {
