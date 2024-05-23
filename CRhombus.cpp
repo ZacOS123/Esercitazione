@@ -20,7 +20,7 @@ Rhombus::Rhombus() {
 /// @brief constructor 
 /// @param dL diagonal (longer)
 /// @param dS diagonal (shorter)
-Rhombus::Rhombus(float dL, float dS) {
+Rhombus::Rhombus(float dL, float dS) :Quadrilateral() {
 
 	Init();
 

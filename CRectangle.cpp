@@ -91,7 +91,7 @@ Rectangle& Rectangle::operator=(const Rectangle &r) {
 /// @return true if the two objects have the same width and the same length  
 bool Rectangle::operator==(const Rectangle &r) { 
 
-	if (r.width == width && r.height == height)
+	if (r.width == width && r.height == height )
 		return true;
 		
 	return false;
