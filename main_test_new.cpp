@@ -4,20 +4,14 @@
 #include "CQuadrilateral.h"
 #include "CRectangle.h"
 #include "CRhombus.h"
+#include "CUser.h"
 
-const int LISTL = 6;
 
-Quadrilateral* quadList[LISTL];
+const int LISTL = 50;
 
-void Show() {
+Quadrilateral* quadList[LISTL] = { nullptr };  //Initializing array of pointers (pointers to quadrilaterals)
 
-	int i;
-
-	for (i = 0; i < LISTL; i++)
-		quadList[i]->Drawing();
-
-}
-
+// Show() moved to CUser.h
 
 
 int main() {
@@ -48,7 +42,8 @@ int main() {
 	quadList[4]= &rhoB;
 	quadList[5]= &rhoC;
 
-	Show();
+	AddShape();
+	Show(quadList);
 	
 	rectA.SetFontSize(20);
 	rectC=rectA;
@@ -66,7 +61,7 @@ int main() {
 		cout << " non siamo uguali" << endl;
 	}
 
-	Show();
+	Show(quadList);
 
 	rectA.SetFontSize(4);
 
