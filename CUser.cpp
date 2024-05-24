@@ -27,32 +27,32 @@ Quadrilateral* AddShape(){
 	TextArea text;
 
 	menu();
-	scanf("%i", &choice);
+	scanf_s("%i", &choice);
 
 	switch (choice) {
 	case 1:
 		cout << "Enter rectangle height: " << endl;
-		scanf("%f", &height);
+		scanf_s("%f", &height);
 		cout << "Enter rectangle width: " << endl;
-		scanf("%f", &width);
+		scanf_s("%f", &width);
 		cout << "Add text (max 50): " << endl;
-		scanf("%50s", text.string);
+		scanf("%49s", text.string);
 		cout << "Enter text size: " << endl;
-		scanf("%i", &text.size);
+		scanf_s("%i", &text.size);
 		return new Rectangle(width, height, text);
 
 	case 2:
 		cout << "Enter rhombus' large diagonal: " << endl;
-		scanf("%f", &height);
+		scanf_s("%f", &height);
 		cout << "Enter rhombus' small diagonal: " << endl;
-		scanf("%f", &width);
+		scanf_s("%f", &width);
 		cout << "Add text (max 50): " << endl;
-		scanf("%50s", text.string);
+		scanf("%49s", text.string);
 		cout << "Enter text size: " << endl;
-		scanf("%i", &text.size);
+		scanf_s("%i", &text.size);
 		return new Rhombus(width, height, text);
 	}
-
+	return NULL;
 }
 
 void menu() {

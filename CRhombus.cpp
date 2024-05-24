@@ -175,7 +175,7 @@ float Rhombus::GetDiagS() {
 /// @return side 
 float Rhombus::GetSide() {
 
-	return sqrt(diagL*diagL/4. + diagS*diagS/4.);
+	return sqrtf(diagL*diagL/4 + diagS*diagS/4);
 
 }
 
@@ -212,7 +212,7 @@ void Rhombus::GetDim(float &dL, float &dS) {
 /// @return the area 
 float Rhombus::Area() {
 	
-	return (diagL*diagS/2.);
+	return (diagL*diagS/2);
 }
 
 
