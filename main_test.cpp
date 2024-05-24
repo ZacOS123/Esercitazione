@@ -48,15 +48,15 @@ int main() {
 	quadList[4]= &rhoB;
 	quadList[5]= &rhoC;
 
-	Show();
+	//Show();
 	
 	rectA.SetFontSize(20);
 	rectC=rectA;
 	rectB.SetTextArea(a2);
 	rhoB.SetText(t3);
 	
-	rectA.Dump();
-	rectC.Dump();
+	//rectA.Dump();
+	//rectC.Dump();
 
 	if (rectC == rectA){
 		cout << "siamo ugualiii"<<endl;
@@ -66,11 +66,11 @@ int main() {
 		cout << " non siamo uguali" << endl;
 	}
 
-	Show();
+	//Show();
 
 	rectA.SetFontSize(4);
 
-	rectA.Dump();
+	//rectA.Dump();
 
 	if (rectC == rectA) {
 		cout << "siamo ugualiii" << endl;
@@ -79,6 +79,8 @@ int main() {
 	{
 		cout << " non siamo uguali" << endl;
 	}
+
+	void UserInterface();
 
 	return 0;
 

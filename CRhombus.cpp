@@ -66,14 +66,15 @@ Rhombus::~Rhombus() {
 
 }
 
-/// @brief copy constructor 
-/// @param o reference to the object that should be copied 
-Rhombus::Rhombus(const Rhombus &r) { 
+/// @brief initialization of the object as a copy of an object 
+/// @param r reference to the object that should be copied 
+Rhombus::Rhombus(const Rhombus& r) {
 
 	cout << "Rhombus - copy constructor" << endl;
 
 	Init(r);
-	
+	Quadrilateral::Init(r);
+
 }
 
 /// @brief overload of operator = 
@@ -109,12 +110,15 @@ void Rhombus::Init() {
 
 /// @brief initialization of the object as a copy of an object 
 /// @param r reference to the object that should be copied 
-void Rhombus::Init(const Rhombus &r) {
-		
-	Init();
+Rhombus::Rhombus(const Rhombus& r) {
+
+	cout << "Rhombus - copy constructor" << endl;
+
 	SetDim(r.diagL,r.diagS);
-	
+	Quadrilateral::Init(r);
+
 }
+
 
 /// @brief total reset of the object  
 void Rhombus::Reset() {

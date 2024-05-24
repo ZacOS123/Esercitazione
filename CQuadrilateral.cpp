@@ -1,6 +1,10 @@
-#include <cstring>
+/// \file CQuadrilateral.cpp
+///	\brief class Quadrilateral: implementation of the functions
+///
+///	Details.
+///
+
 #include "CQuadrilateral.h"
-#include <string.h>
 using namespace std;
 
 /// @brief default constructor 
@@ -232,6 +236,7 @@ void Quadrilateral::Dump() {
 	char temp[SLEN] = " ";
 	GetText(temp);
 	
+	
 	cout << endl;
 	cout << "---Quadrilateral---" << endl; 
 	cout << endl;
@@ -239,7 +244,7 @@ void Quadrilateral::Dump() {
 	cout << "Sides = " << sides[0] << "; " << sides[1] << "; " << sides[2] << "; " << sides[3] << "; " << endl;
 	cout << "Perimeter = " << GetPerimeter() << endl;
 	cout << "Area = " << GetArea() << endl;
-	cout << "text"<< temp <<endl;
+	cout << "text: " << tarea->string << " of size: " << tarea->size << endl;
 	cout << "------------------" << endl; 
 	cout << endl;
 
