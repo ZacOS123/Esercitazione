@@ -8,6 +8,7 @@
 #include<cmath>
 #include "CRhombus.h"
 
+
 /// @brief default constructor 
 Rhombus::Rhombus() {
 
@@ -35,6 +36,9 @@ Rhombus::Rhombus(float dL, float dS) :Quadrilateral() {
 
 }
 
+
+
+
 /// @brief constructor 
 /// @param dL diagonal (longer)
 /// @param dS diagonal (shorter)
@@ -52,7 +56,7 @@ Rhombus::Rhombus(float dL, float dS, TextArea ta) :Quadrilateral(ta) {
 	}
 	else
 		SetDim(dL, dS);
-		SetTextArea(ta);
+		SetTextArea(ta);//fixed
 	return;
 }
 
@@ -66,15 +70,14 @@ Rhombus::~Rhombus() {
 
 }
 
-/// @brief initialization of the object as a copy of an object 
-/// @param r reference to the object that should be copied 
-Rhombus::Rhombus(const Rhombus& r) {
+/// @brief copy constructor 
+/// @param o reference to the object that should be copied 
+Rhombus::Rhombus(const Rhombus &r) { 
 
 	cout << "Rhombus - copy constructor" << endl;
 
 	Init(r);
-	Quadrilateral::Init(r);
-
+	
 }
 
 /// @brief overload of operator = 
@@ -104,21 +107,18 @@ bool Rhombus::operator==(const Rhombus &r) {
 /// @brief default initialization of the object
 void Rhombus::Init() {
 	SetDim(0,0);
-	
+	Quadrilateral::Init();
 }
 
 
 /// @brief initialization of the object as a copy of an object 
 /// @param r reference to the object that should be copied 
-Rhombus::Rhombus(const Rhombus& r) {
-
-	cout << "Rhombus - copy constructor" << endl;
-
+void Rhombus::Init(const Rhombus &r) {
+		
 	SetDim(r.diagL,r.diagS);
 	Quadrilateral::Init(r);
 
 }
-
 
 /// @brief total reset of the object  
 void Rhombus::Reset() {
@@ -261,11 +261,4 @@ void Rhombus::Drawing() {
 
 
 }
-
-
-
-
-
-
-
 

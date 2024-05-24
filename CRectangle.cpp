@@ -74,13 +74,13 @@ Rectangle::Rectangle(const Rectangle &r) {
 }
 
 /// @brief overload of operator = 
-/// @param o reference to the object on the right side of the operator 
+/// @param r reference to the object on the right side of the operator 
 /// @return reference to the object on the left side of the operator 
 Rectangle& Rectangle::operator=(const Rectangle &r) { 
 
 	cout << "Rectangle - operator =" << endl;
 
-	Init(r);
+	Quadrilateral::Init(r);
 	
 	return *this;
 	
