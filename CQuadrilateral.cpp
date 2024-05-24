@@ -104,8 +104,10 @@ void Quadrilateral::Init(const Quadrilateral &o) {
 	sides[3] = o.sides[3];
 	
 	SetText(o.tarea->string); /////bahhhh
+	SetFontSize(o.tarea->size);
 	
 }
+
 
 /// @brief total reset of the object  
 void Quadrilateral::Reset() {
