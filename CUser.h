@@ -14,11 +14,14 @@
 void Show(Quadrilateral* list[]);
 
 /// @brief creates a new shape based on user choice
-Quadrilateral* AddShape();
+void AddShape(Quadrilateral* list[]);
 
 
 /// @brief menu choice
 void menu();
+
+/// @brief Main startup menu
+int MainMenu();
 
 
 ///  @brief User warning messages

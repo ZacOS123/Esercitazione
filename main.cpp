@@ -11,70 +11,22 @@ const int LISTL = 50;
 
 Quadrilateral* quadList[LISTL] = { nullptr };  //Initializing array of pointers (pointers to quadrilaterals)
 
-// Show() moved to CUser.h
-
 
 int main() {
-
-	 
-	TextArea a1, a2;
-	char t1[SLEN]= "testo 1"; 
-	char t2[SLEN]= "testo 2"; 
-	char t3[SLEN]= "testo 3";
+	Quadrilateral* tempQuadPtr = NULL; //used to temporarily store returned ptr from AddShape()
+	int choice = MainMenu();
 	
-	memcpy(a1.string,t1,strlen(t1)+1);
-	a1.size = 8; 
-	memcpy(a2.string,t2,strlen(t2)+1);
-	a2.size = 14;
+	while (choice != 5) {
+
+		switch (choice) {
+			case 1:
+				Show(quadList);
+				break;
+			case 2:
+				AddShape(quadList);
+				break;
+		}
+		choice = MainMenu();
+	}
 	
-	Rectangle rectA(10,5);
-	Rectangle rectB(3,7,a1);
-	Rectangle rectC = rectA;
-
-	Rhombus rhoA(6,2,a2);
-	Rhombus rhoB = rhoA;
-	Rhombus rhoC(4,3);
-		
-	quadList[0]= &rectA;
-	quadList[1]= &rectB;
-	quadList[2]= &rectC;
-	quadList[3]= &rhoA;
-	quadList[4]= &rhoB;
-	quadList[5]= &rhoC;
-
-	AddShape();
-	Show(quadList);
-	
-	rectA.SetFontSize(20);
-	rectC=rectA;
-	rectB.SetTextArea(a2);
-	rhoB.SetText(t3);
-	
-	rectA.Dump();
-	rectC.Dump();
-
-	if (rectC == rectA){
-		cout << "siamo ugualiii"<<endl;
-	}
-	else
-	{
-		cout << " non siamo uguali" << endl;
-	}
-
-	Show(quadList);
-
-	rectA.SetFontSize(4);
-
-	rectA.Dump();
-
-	if (rectC == rectA) {
-		cout << "siamo ugualiii" << endl;
-	}
-	else
-	{
-		cout << " non siamo uguali" << endl;
-	}
-
-	return 0;
-
 }
