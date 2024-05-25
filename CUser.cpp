@@ -28,19 +28,17 @@ void Show(Quadrilateral* list[]) {
 
 /// @brief creates a new shape based on user choice
 /// @param choice (user choice)
-/// @param height 
-///	@param width 
-/// 
+/// @param dim1 first side or diagonal
+///	@param dim2  second side or diagonal
+/// @param text type textarea of quadrilateral class
+/// @param warning used to select the warning message
 Quadrilateral* AddShape() {
 	int choice = 0;
 	float dim2 = 0; //do not change this values. The checks will not work
 	float dim1 = 0;
 	TextArea text{"", 0};
 	int warning = 0;
-	int control = 1;
-	int countloop = 0;
 	
-
 
 	while (choice != 1 && choice != 2) { 
 		menu();
@@ -56,7 +54,6 @@ Quadrilateral* AddShape() {
 
 	switch (choice) {
 	case 1:
-		//while (dim1 <= 0) {
 			while (dim1 <= 0)
 			{
 				cout << "Enter rectangle height: " << endl;
@@ -81,7 +78,7 @@ Quadrilateral* AddShape() {
 
 			while (text.size == 0) {
 					cout << "Enter text size: " << endl;
-					control = scanf_s("%ui", &text.size);
+					scanf_s("%ui", &text.size);
 					if (text.size == 0) {
 						warning = 5;
 						WarningMessage(warning);
@@ -96,7 +93,7 @@ Quadrilateral* AddShape() {
 					cout << "Enter rhombus' larger diagonal:" << endl;
 					scanf_s("%f", &dim1);
 					if (dim1 <= 0) {
-						warning = 3;/////
+						warning = 3;
 						WarningMessage(warning);
 					}
 				}
