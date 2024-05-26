@@ -257,7 +257,7 @@ void Rhombus::Dump() {
 void Rhombus::Drawing() {
 	
 	cout << "Rhombus of longer diagonal: " << diagL << ", shorter diagonal: " << diagS << endl;
-	cout<< "With text:  " << tarea->string << " of size: " << tarea->size << "\n" << endl;
+	cout<< "With text: '" << tarea->string << "'   of size: " << tarea->size << "\n" << endl;
 
 
 }

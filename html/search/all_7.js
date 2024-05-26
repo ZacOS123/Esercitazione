@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['quadrilateral_0',['Quadrilateral',['../class_quadrilateral.html',1,'Quadrilateral'],['../class_quadrilateral.html#a9523424da49ca44ae3b979f8f5576732',1,'Quadrilateral::Quadrilateral()'],['../class_quadrilateral.html#ab55afb1d60af5783a3c71410f1f089a7',1,'Quadrilateral::Quadrilateral(TextArea ta)'],['../class_quadrilateral.html#a97514417778deb314b4d8a0f81a240ef',1,'Quadrilateral::Quadrilateral(const Quadrilateral &amp;o)']]]
+  ['operator_3d_0',['operator=',['../class_quadrilateral.html#a5e95fb0b6dc309773c6f45b1e7453b21',1,'Quadrilateral::operator=()'],['../class_rectangle.html#aa121f214bf457c1dfe038b995d859010',1,'Rectangle::operator=()'],['../class_rhombus.html#acf1ca62cf2d4c701b467e073a3f1a7f0',1,'Rhombus::operator=()']]],
+  ['operator_3d_3d_1',['operator==',['../class_quadrilateral.html#a40290e9a1394cb238b41fc020d0010d8',1,'Quadrilateral::operator==()'],['../class_rectangle.html#ae396a76b0812c2020a00877372ba66ab',1,'Rectangle::operator==()'],['../class_rhombus.html#aadcbfa682d5a0dfd59e8beafde7398dd',1,'Rhombus::operator==()']]]
 ];

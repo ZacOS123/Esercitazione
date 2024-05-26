@@ -7,10 +7,12 @@
 #define _CRT_SECURE_NO_WARNINGS
 
 #include <iostream>
+#include <string.h>
 #include "CUser.h"
 #include "CQuadrilateral.h"
 #include "CRectangle.h"
 #include "CRhombus.h"
+#define MAX 50
 
 
 using std::cout;
@@ -21,22 +23,20 @@ using std::scanf;
 /// @prints all the objects 
 void Show(Quadrilateral* list[]) {
 
-	int i=0;
-	if (list[i] == NULL) {    //checks if the first element of the array is empty
-		cout << "\n\nNo shapes found. Storage empty.\n\n" << endl;
-	}
-	else {
-		for (i = 0; i <= 50 ; i++) {
-			if (list[i] == NULL) {
-				i++;
-			}
-			else {
-				cout << "\n" << i << "." << endl;
-				list[i]->Drawing();
-			}
+	int i;
+	int temp_i = -1; //Used to identify if the array is empty. Temporary index: if contaminated means that the array is not empty
+
+	for (i = 0; i <= MAX; i++) {
+		if (list[i] != NULL) {
+			temp_i = i;
+			cout << "\n" << i << "." << endl;
+			list[i]->Drawing();
+			continue;
 		}
 	}
-	
+	if (temp_i == -1) {
+			cout << "\n\nNo shapes found. Storage empty.\n\n" << endl;
+	}
 }
 
 /// @brief creates a new shape based on user choice
@@ -54,12 +54,12 @@ void AddShape(Quadrilateral* list[]) {
 	Quadrilateral* tempQuadPtr = NULL;  //to store created shape temporarily
 	int arrayIndex = 0; //used to search in array
 	
-	for (arrayIndex = 0; arrayIndex <= 50; arrayIndex++) {  //checks for available storage
+	for (arrayIndex = 0; arrayIndex <= MAX; arrayIndex++) {  //checks for available storage
 		if (list[arrayIndex] == NULL) {
 			break;
 		}
-		else if (arrayIndex == 50 && list[arrayIndex] != NULL) {
-			cout << "\nNo storage available. Maximum shapes number (50) reached.\n" << endl;
+		else if (arrayIndex == MAX && list[arrayIndex] != NULL) {
+			cout << "\nNo storage available. Maximum shapes number (MAX) reached.\n" << endl;
 			return;
 		}
 	}
@@ -96,12 +96,12 @@ void AddShape(Quadrilateral* list[]) {
 				}
 			}
 
-			cout << "Add text (max 50): " << endl;
-			scanf("%49s", text.string);
+			cout << "Add text (max MAX, NO space): " << endl;
+			scanf("%s", text.string);
 
 			while (text.size == 0) {
 					cout << "Enter text size: " << endl;
-					scanf_s("%ui", &text.size);
+					scanf_s("%i", &text.size);
 					if (text.size == 0) {
 						warning = 5;
 						WarningMessage(warning);
@@ -131,8 +131,8 @@ void AddShape(Quadrilateral* list[]) {
 				}
 			}
 
-			cout << "Add text (max 50): " << endl;
-			scanf("%49s", text.string);
+			cout << "Add text (max MAX, NO space): " << endl;
+			scanf("%s", text.string);
 
 			while (text.size == 0) {
 				cout << "Enter text size: " << endl;
@@ -183,7 +183,7 @@ void deleteAll(Quadrilateral* list[])
 		cout << "\n\nNo shapes found. Storage empty.\n\n" << endl;
 	}
 	else {
-		for (i = 0; i <= 50; i++) {
+		for (i = 0; i <= MAX; i++) {
 			if (list[i] == NULL) {
 				i++;
 			}
@@ -193,7 +193,7 @@ void deleteAll(Quadrilateral* list[])
 			}
 		}
 	}
-	cout << "\nAll objects deleted successfully\n" << endl;
+	cout << "\nAll shapes deleted successfully\n" << endl;
 
 }
 

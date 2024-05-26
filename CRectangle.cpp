@@ -214,7 +214,7 @@ void Rectangle::ErrorMessage(const char *string) {
 void Rectangle::Drawing() {
 	
 	cout << "Rectangle of width: " << width << ", height:" << height << endl;
-	cout << "With text:  " << tarea->string << " of size: " << tarea->size << "\n" << endl;
+	cout << "With text: '" << tarea->string << "'   of size: " << tarea->size << "\n" << endl;
 
 }
 

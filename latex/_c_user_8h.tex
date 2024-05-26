@@ -1,0 +1,131 @@
+\doxysection{CUser.\+h File Reference}
+\hypertarget{_c_user_8h}{}\label{_c_user_8h}\index{CUser.h@{CUser.h}}
+
+
+Library of functions for user interface.  
+
+
+{\ttfamily \#include $<$iostream$>$}\newline
+{\ttfamily \#include "{}CQuadrilateral.\+h"{}}\newline
+{\ttfamily \#include "{}CRectangle.\+h"{}}\newline
+{\ttfamily \#include "{}CRhombus.\+h"{}}\newline
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{_c_user_8h_a7a928afef09e0205cdb6418de8a1b28c}{Show}} (\mbox{\hyperlink{class_quadrilateral}{Quadrilateral}} \texorpdfstring{$\ast$}{*}list\mbox{[}$\,$\mbox{]})
+\begin{DoxyCompactList}\small\item\em @function Show \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_c_user_8h_af1c5cb53ffc987145828781949620255}{Add\+Shape}} (\mbox{\hyperlink{class_quadrilateral}{Quadrilateral}} \texorpdfstring{$\ast$}{*}list\mbox{[}$\,$\mbox{]})
+\begin{DoxyCompactList}\small\item\em creates a new shape based on user choice (takes in an array to save the pointer)ù \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_c_user_8h_ac96c0b8e514ac033d3bb6aa29b041cba}{delete\+Shape}} (\mbox{\hyperlink{class_quadrilateral}{Quadrilateral}} \texorpdfstring{$\ast$}{*}list\mbox{[}$\,$\mbox{]})
+\begin{DoxyCompactList}\small\item\em @bried displays shapes and deletes one based on user choice \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_c_user_8h_abb09d46e77577a05e7bb2841763c5345}{delete\+All}} (\mbox{\hyperlink{class_quadrilateral}{Quadrilateral}} \texorpdfstring{$\ast$}{*}list\mbox{[}$\,$\mbox{]})
+\begin{DoxyCompactList}\small\item\em deletes all the shapes \end{DoxyCompactList}\item 
+\Hypertarget{_c_user_8h_a2a0e843767aeea4f433a28b9c54f573a}\label{_c_user_8h_a2a0e843767aeea4f433a28b9c54f573a} 
+void {\bfseries menu} ()
+\begin{DoxyCompactList}\small\item\em menu choice \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{_c_user_8h_abfec54f3fce9d600e2e7ea0461fdd82a}{Main\+Menu}} ()
+\begin{DoxyCompactList}\small\item\em Main startup menu. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_c_user_8h_a50fafe2a139eeb36afb9d2914d2a88d2}{Warning\+Message}} (int warning)
+\begin{DoxyCompactList}\small\item\em User warning messages. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Library of functions for user interface. 
+
+Details. 
+
+\doxysubsection{Function Documentation}
+\Hypertarget{_c_user_8h_af1c5cb53ffc987145828781949620255}\label{_c_user_8h_af1c5cb53ffc987145828781949620255} 
+\index{CUser.h@{CUser.h}!AddShape@{AddShape}}
+\index{AddShape@{AddShape}!CUser.h@{CUser.h}}
+\doxysubsubsection{\texorpdfstring{AddShape()}{AddShape()}}
+{\footnotesize\ttfamily void Add\+Shape (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_quadrilateral}{Quadrilateral}} \texorpdfstring{$\ast$}{*}}]{list\mbox{[}$\,$\mbox{]} }\end{DoxyParamCaption})}
+
+
+
+creates a new shape based on user choice (takes in an array to save the pointer)ù 
+
+creates a new shape based on user choice (takes in an array to save the pointer)ù
+
+
+\begin{DoxyParams}{Parameters}
+{\em choice} & (user choice) \\
+\hline
+{\em dim1} & first side or diagonal \\
+\hline
+{\em dim2} & second side or diagonal \\
+\hline
+{\em text} & type textarea of quadrilateral class \\
+\hline
+{\em warning} & used to select the warning message \\
+\hline
+\end{DoxyParams}
+\Hypertarget{_c_user_8h_abb09d46e77577a05e7bb2841763c5345}\label{_c_user_8h_abb09d46e77577a05e7bb2841763c5345} 
+\index{CUser.h@{CUser.h}!deleteAll@{deleteAll}}
+\index{deleteAll@{deleteAll}!CUser.h@{CUser.h}}
+\doxysubsubsection{\texorpdfstring{deleteAll()}{deleteAll()}}
+{\footnotesize\ttfamily void delete\+All (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_quadrilateral}{Quadrilateral}} \texorpdfstring{$\ast$}{*}}]{list\mbox{[}$\,$\mbox{]} }\end{DoxyParamCaption})}
+
+
+
+deletes all the shapes 
+
+deletes all the shapes \Hypertarget{_c_user_8h_ac96c0b8e514ac033d3bb6aa29b041cba}\label{_c_user_8h_ac96c0b8e514ac033d3bb6aa29b041cba} 
+\index{CUser.h@{CUser.h}!deleteShape@{deleteShape}}
+\index{deleteShape@{deleteShape}!CUser.h@{CUser.h}}
+\doxysubsubsection{\texorpdfstring{deleteShape()}{deleteShape()}}
+{\footnotesize\ttfamily void delete\+Shape (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_quadrilateral}{Quadrilateral}} \texorpdfstring{$\ast$}{*}}]{list\mbox{[}$\,$\mbox{]} }\end{DoxyParamCaption})}
+
+
+
+@bried displays shapes and deletes one based on user choice 
+
+@bried displays shapes and deletes one based on user choice
+
+
+\begin{DoxyParams}{Parameters}
+{\em choice} & user choice \\
+\hline
+\end{DoxyParams}
+\Hypertarget{_c_user_8h_abfec54f3fce9d600e2e7ea0461fdd82a}\label{_c_user_8h_abfec54f3fce9d600e2e7ea0461fdd82a} 
+\index{CUser.h@{CUser.h}!MainMenu@{MainMenu}}
+\index{MainMenu@{MainMenu}!CUser.h@{CUser.h}}
+\doxysubsubsection{\texorpdfstring{MainMenu()}{MainMenu()}}
+{\footnotesize\ttfamily int Main\+Menu (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Main startup menu. 
+
+Main startup menu.
+
+
+\begin{DoxyParams}{Parameters}
+{\em choice} & user choice \\
+\hline
+\end{DoxyParams}
+\Hypertarget{_c_user_8h_a7a928afef09e0205cdb6418de8a1b28c}\label{_c_user_8h_a7a928afef09e0205cdb6418de8a1b28c} 
+\index{CUser.h@{CUser.h}!Show@{Show}}
+\index{Show@{Show}!CUser.h@{CUser.h}}
+\doxysubsubsection{\texorpdfstring{Show()}{Show()}}
+{\footnotesize\ttfamily void Show (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_quadrilateral}{Quadrilateral}} \texorpdfstring{$\ast$}{*}}]{list\mbox{[}$\,$\mbox{]} }\end{DoxyParamCaption})}
+
+
+
+@function Show 
+
+@function Show \Hypertarget{_c_user_8h_a50fafe2a139eeb36afb9d2914d2a88d2}\label{_c_user_8h_a50fafe2a139eeb36afb9d2914d2a88d2} 
+\index{CUser.h@{CUser.h}!WarningMessage@{WarningMessage}}
+\index{WarningMessage@{WarningMessage}!CUser.h@{CUser.h}}
+\doxysubsubsection{\texorpdfstring{WarningMessage()}{WarningMessage()}}
+{\footnotesize\ttfamily void Warning\+Message (\begin{DoxyParamCaption}\item[{int}]{warning }\end{DoxyParamCaption})}
+
+
+
+User warning messages. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em waring} & select the warning case \\
+\hline
+\end{DoxyParams}
