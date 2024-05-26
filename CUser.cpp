@@ -114,7 +114,7 @@ void AddShape(Quadrilateral* list[]) {
 		case 2:
 
 			while (dim1 <= 0) {
-				cout << "Enter rhombus' diagonal:" << endl;
+				cout << "Enter rhombus' first diagonal:" << endl;
 				scanf_s("%f", &dim1);
 				if (dim1 <= 0) {
 					warning = 3;
@@ -123,7 +123,7 @@ void AddShape(Quadrilateral* list[]) {
 			}
 
 			while (dim2 <= 0) {
-				cout << "Enter rhombus' diagonal:" << endl;
+				cout << "Enter rhombus' second diagonal:" << endl;
 				scanf_s("%f", &dim2);
 				if (dim2 <= 0) {
 					warning = 3;
