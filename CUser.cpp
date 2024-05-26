@@ -114,7 +114,7 @@ void AddShape(Quadrilateral* list[]) {
 		case 2:
 
 			while (dim1 <= 0) {
-				cout << "Enter rhombus' larger diagonal:" << endl;
+				cout << "Enter rhombus' diagonal:" << endl;
 				scanf_s("%f", &dim1);
 				if (dim1 <= 0) {
 					warning = 3;
@@ -123,10 +123,10 @@ void AddShape(Quadrilateral* list[]) {
 			}
 
 			while (dim2 <= 0) {
-				cout << "Enter rhombus' shorter diagonal:" << endl;
+				cout << "Enter rhombus' diagonal:" << endl;
 				scanf_s("%f", &dim2);
 				if (dim2 <= 0) {
-					warning = 4;
+					warning = 3;
 					WarningMessage(warning);
 				}
 			}
@@ -211,10 +211,7 @@ void WarningMessage(int warning){
 			cout << "Width value should be greater than zero!!" << endl;
 			break;
 		case 3:
-			cout << "Larger diagonal value should be greater than zero!!" << endl;
-			break;
-		case 4:
-			cout << "Shorter diagonal value should be greater than zero!!" << endl;
+			cout << "Diagonal value should be greater than zero!!" << endl;
 			break;
 		case 5:
 			cout << "Font size value should be greater than zero!!" << endl;
