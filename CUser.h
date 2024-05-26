@@ -19,6 +19,9 @@ void AddShape(Quadrilateral* list[]);
 /// @bried displays shapes and deletes one based on user choice
 void deleteShape(Quadrilateral* list[]);
 
+/// @brief deletes all the shapes
+void deleteAll(Quadrilateral* list[]);
+
 /// @brief menu choice
 void menu();
 

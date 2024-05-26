@@ -1,5 +1,5 @@
 /// \file CUser.cpp 
-///	\brief user interface functions file
+///	\brief User interface functions file
 ///
 ///	Details.
 ///
@@ -17,6 +17,8 @@ using std::cout;
 using std::endl;
 using std::scanf;
 
+
+/// @prints all the objects 
 void Show(Quadrilateral* list[]) {
 
 	int i=0;
@@ -155,6 +157,9 @@ void menu() {
 	cout << "To create a rhombus enter - 2 - " << endl;
 }
 
+
+/// @brief deletes an object based on user choice
+/// @param choice user choice
 void deleteShape(Quadrilateral* list[]) {
 	int choice;
 
@@ -166,6 +171,29 @@ void deleteShape(Quadrilateral* list[]) {
 	list[choice] = NULL;
 	cout << "\nObject deleted successfully\n" << endl;
 
+
+}
+
+
+/// @brief deletes all the objects.
+void deleteAll(Quadrilateral* list[]) 
+{
+	int i = 0;
+	if (list[i] == NULL) {   
+		cout << "\n\nNo shapes found. Storage empty.\n\n" << endl;
+	}
+	else {
+		for (i = 0; i <= 50; i++) {
+			if (list[i] == NULL) {
+				i++;
+			}
+			else {
+				delete list[i];
+				list[i] = NULL;
+			}
+		}
+	}
+	cout << "\nAll objects deleted successfully\n" << endl;
 
 }
 
@@ -200,6 +228,9 @@ void WarningMessage(int warning){
 	return;
 }
 
+
+/// @brief Main user menu 
+/// @param choice user choice
 int MainMenu() {
 	int choice;
 	cout << "\nWhat would you like to do?\n" << endl;
