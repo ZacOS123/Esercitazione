@@ -29,6 +29,7 @@ void Show(Quadrilateral* list[]) {
 				i++;
 			}
 			else {
+				cout << "\n" << i << "." << endl;
 				list[i]->Drawing();
 			}
 		}
@@ -51,7 +52,15 @@ void AddShape(Quadrilateral* list[]) {
 	Quadrilateral* tempQuadPtr = NULL;  //to store created shape temporarily
 	int arrayIndex = 0; //used to search in array
 	
-
+	for (arrayIndex = 0; arrayIndex <= 50; arrayIndex++) {  //checks for available storage
+		if (list[arrayIndex] == NULL) {
+			break;
+		}
+		else if (arrayIndex == 50 && list[arrayIndex] != NULL) {
+			cout << "\nNo storage available. Maximum shapes number (50) reached.\n" << endl;
+			return;
+		}
+	}
 	while (choice != 1 && choice != 2) { 
 		menu();
 		scanf_s(" %i", &choice);
@@ -63,14 +72,7 @@ void AddShape(Quadrilateral* list[]) {
 	}
 
 	switch (choice) {
-		for (arrayIndex = 0; arrayIndex <= 50; arrayIndex++) {  //checks for available storage
-			if (list[arrayIndex] == NULL) {
-				break;
-			}
-			else if (arrayIndex == 50 && list[arrayIndex] != NULL) {
-				cout << "No storage available. Maximum shapes number (50) reached.\n" << endl;
-				return;
-			}
+		
 			
 		case 1:
 			while (dim1 <= 0)
@@ -142,8 +144,6 @@ void AddShape(Quadrilateral* list[]) {
 			cout << "\n\nRhombus created successfully!\n\n" << endl;
 			return;
 	}
-	
-		}
 		return;
 	}
 
@@ -155,6 +155,19 @@ void menu() {
 	cout << "To create a rhombus enter - 2 - " << endl;
 }
 
+void deleteShape(Quadrilateral* list[]) {
+	int choice;
+
+	Show(list);
+	cout << "\nWhich shape would you like to delete?\n" << endl;
+	cout << "Enter corrisponding number: " << endl;
+	scanf_s("%i", &choice);
+	delete list[choice];
+	list[choice] = NULL;
+	cout << "\nObject deleted successfully\n" << endl;
+
+
+}
 
 
 ///  @brief User warning messages

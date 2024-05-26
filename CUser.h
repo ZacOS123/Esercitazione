@@ -13,9 +13,11 @@
 /// @function Show
 void Show(Quadrilateral* list[]);
 
-/// @brief creates a new shape based on user choice
+/// @brief creates a new shape based on user choice (takes in an array to save the pointer)ù
 void AddShape(Quadrilateral* list[]);
 
+/// @bried displays shapes and deletes one based on user choice
+void deleteShape(Quadrilateral* list[]);
 
 /// @brief menu choice
 void menu();

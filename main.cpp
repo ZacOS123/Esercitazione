@@ -25,6 +25,8 @@ int main() {
 			case 2:
 				AddShape(quadList);
 				break;
+			case 3:
+				deleteShape(quadList);
 		}
 		choice = MainMenu();
 	}
